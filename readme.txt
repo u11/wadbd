@@ -10,8 +10,10 @@
 2)点击Stop adbd
 3)点击Start adbd
 
-4)在电脑端cmd窗口输入adb connect ip,ip为手机端的程序上显示的ip
+4)连接设备:在电脑端cmd窗口输入adb connect ip,ip为手机端的程序上显示的ip
 
 说明:
 1)要断开连接只需要输入adb disconnect
 2)要查看当前链接的设备请输入adb devices
+3)如果as发现不了设备请先断开连接再连接设备
+4)连接成功后可以关闭此程序
