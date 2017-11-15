@@ -45,6 +45,16 @@
             android:text="@string/button_start"
             tools:layout_editor_absoluteY="0dp"
             tools:layout_editor_absoluteX="8dp" />
+        <TextView
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/button_start"
+            android:layout_width="wrap_content"
+            android:textColor="@color/colorBlue"
+            android:id="@+id/ip"
+            android:textStyle="bold"
+            android:textSize="48dp"
+            android:text="127.0.0.1"
+            android:layout_height="wrap_content" />
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>
