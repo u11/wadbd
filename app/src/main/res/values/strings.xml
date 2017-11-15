@@ -6,4 +6,8 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="button_setting">设置service.adb.tcp.port</string>
+    <string name="button_stop">Stop adbd</string>
+    <string name="button_start">Start adbd</string>
 </resources>

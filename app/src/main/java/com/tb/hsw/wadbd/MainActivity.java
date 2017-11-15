@@ -9,6 +9,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
+
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -17,6 +22,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        ButterKnife.bind(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -86,5 +92,24 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @OnClick({R.id.button_set,R.id.button_stop,R.id.button_start})
+    public void OnClick(View v) {
+        final int id = v.getId();
+        switch(id){
+            case R.id.button_set:{
+                Toast.makeText(getApplicationContext(),"11",Toast.LENGTH_LONG).show();
+                break;
+            }
+            case R.id.button_stop:{
+                Toast.makeText(getApplicationContext(),"2222",Toast.LENGTH_LONG).show();
+                break;
+            }
+            case R.id.button_start:{
+                Toast.makeText(getApplicationContext(),"333",Toast.LENGTH_LONG).show();
+                break;
+            }
+        }
     }
 }
