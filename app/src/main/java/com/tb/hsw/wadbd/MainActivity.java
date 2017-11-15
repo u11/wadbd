@@ -16,6 +16,8 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.tb.hsw.u11.utils.RootUtils;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
@@ -126,15 +128,18 @@ public class MainActivity extends AppCompatActivity
         final int id = v.getId();
         switch(id){
             case R.id.button_set:{
-                Toast.makeText(getApplicationContext(),"11",Toast.LENGTH_LONG).show();
+                RootUtils.su("setprop service.adb.tcp.port 5555");
+                Toast.makeText(getApplicationContext(),"setprop service.adb.tcp.port 5555",Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_stop:{
-                Toast.makeText(getApplicationContext(),"2222",Toast.LENGTH_LONG).show();
+                RootUtils.su("stop adbd");
+                Toast.makeText(getApplicationContext(),"adbd stop",Toast.LENGTH_LONG).show();
                 break;
             }
             case R.id.button_start:{
-                Toast.makeText(getApplicationContext(),"333",Toast.LENGTH_LONG).show();
+                RootUtils.su("start adbd");
+                Toast.makeText(getApplicationContext(),"adbd start",Toast.LENGTH_LONG).show();
                 break;
             }
         }
